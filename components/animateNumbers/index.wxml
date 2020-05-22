@@ -1,0 +1,14 @@
+<!--components/animateNumbers/index.wxml-->
+
+<view class="count-box">
+  <view class="viewport" wx:for="{{columns}}" wx:key="index">
+    <view class="column-wrap" style="transform: translate3d(0, -{{keys[index] * 40}}px, 0);">
+      <view 
+        wx:for="{{item}}" 
+        wx:for-item="row"
+        wx:for-index="idx"
+        wx:key="idx" 
+        class="item">{{row}}</view>
+    </view>
+  </view>
+</view>

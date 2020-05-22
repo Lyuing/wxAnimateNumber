@@ -1,0 +1,13 @@
+<!--components/animateNumber/index.wxml-->
+
+<view class="count-box" style="width:{{_options.width}};">
+  <view class="viewport" style="height:{{_options.height}}px;">
+    <view class="column-wrap" style="transform: translate3d(0, -{{key * _options.height}}px, 0); transition-duration:{{_options.during}}s; transition-timing-function:{{_options.ease}}">
+      <view 
+        wx:for="{{columns}}" 
+        wx:key="index" 
+        class="item"
+        style="color:{{_options.color}};height:{{_options.height}}px;line-height: {{_options.height}}px;{{_options.columnStyle}}">{{item}}</view>
+    </view>
+  </view>
+</view>
