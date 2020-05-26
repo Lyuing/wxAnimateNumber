@@ -3,6 +3,7 @@
   width: 80%;
   display: flex;
   justify-content: space-around;
+  margin: auto;
 }
 .input {
   width: 120rpx;
