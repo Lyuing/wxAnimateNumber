@@ -1,13 +1,15 @@
 <!--index.wxml-->
 <view class="container">
   <view class="userinfo">
-    <button bindtap="onReset">重置</button>
-    <input class="input" value="{{numberVal}}" type='number' bindinput="onInput"></input>
+    <button class="btn" bindtap="onReset">重置</button>
+    <input class="input" value="{{numberVal}}" type='number' bindinput="onInput" bindconfirm="onInput"></input>
+    <button class="btn" type="primary" bindtap="onRun">运行</button>
   </view>
 
   <!-- 组件 -->
+  <view class="title">单维数字阵列:</view>
   <view class="count-up">
-    <view>value传值,默认范围 0~100,配置项options</view>
+    <view>默认范围 0~100,配置项options</view>
     <animate-number value="{{numberVal}}" options='{{options}}'/>
   </view>
 
@@ -17,13 +19,14 @@
   </view>
 
   <view class="count-up">
-    <view>设置最小值为 start：-50</view>
-    <animate-number value="{{numberVal}}" min='{{start}}' />
+    <view>设置范围为 -50~200</view>
+    <animate-number value="{{numberVal}}" min='{{start}}' max='{{limit}}' />
   </view>
 
+  <view class="title">多维数字阵列:</view>
   <view class="count-up">
-    <view>多维</view>
-    <animate-numbers value="{{numberVal}}" max='{{limit}}' />
+    <view>配置同上</view>
+    <animate-numbers value="{{numberVal}}" max='{{limit}}' options='{{options}}' />
   </view>
   
 </view>

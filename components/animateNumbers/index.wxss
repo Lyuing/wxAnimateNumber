@@ -8,8 +8,8 @@
   align-items: center;
 }
 .viewport{
-  width: 24px;
-  height: 40px;
+  /* width: 24px;
+  height: 40px; */
   overflow: hidden;
 }
 .column-wrap{

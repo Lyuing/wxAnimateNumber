@@ -4,10 +4,11 @@ const app = getApp()
 
 Page({
   data: {
-    numberVal: 0,
+    value: 0,
+    numberVal: '',
 
     start: -50,
-    limit: 299,
+    limit: 200,
 
     options: {
       color: 'green',
@@ -23,10 +24,15 @@ Page({
       numberVal: 0
     })
   },
+  onRun(){
+    this.setData({
+      numberVal: this.data.value
+    })
+  },
   onInput(e){
     let value = e.detail.value
     this.setData({
-      numberVal: value
+      value
     })
   },
   

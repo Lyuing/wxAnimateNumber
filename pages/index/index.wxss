@@ -1,9 +1,13 @@
 /**index.wxss**/
-
+.userinfo{
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+}
 .input {
   width: 120rpx;
-  height: 48rpx;
-  margin: 40rpx auto;
+  height: 60rpx;
+  /* margin: 40rpx auto; */
   border: 1rpx solid #dedede;
   border-radius: 10rpx;
   text-align: center;
@@ -15,4 +19,16 @@
   flex-direction: column;
   align-items: center;
   padding: 20rpx 0;
+}
+button.btn{
+  width: 140rpx;
+  height: 60rpx;
+  padding: 0;
+  line-height: 60rpx;
+  font-size: 24rpx;
+}
+
+.title{
+  padding: 20rpx 0 0 40rpx;
+  color: #666;
 }

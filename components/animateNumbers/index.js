@@ -1,5 +1,14 @@
 // components/animateNumbers/index.js
 
+const CONFIG = {
+  during: 1,        // :number 动画时间
+  height: 40,       // :number 滚动行高 px
+  cellWidth: 24,    // 单个数字宽度
+  ease: 'cubic-bezier(0, 1, 0, 1)',   // 动画过渡效果
+  color: '#FF5837', // 字体颜色
+  columnStyle: '',  // 字体单元 覆盖样式
+}
+
 Component({
 
   properties: {
@@ -23,16 +32,21 @@ Component({
         this.setRange()
       }
     },
+    options: {
+      type: Object,
+      value: {}
+    },
     
   },
   data: {
     columns: [],
     keys: [],
+    _options: JSON.parse(JSON.stringify(CONFIG)),
   },
 
   attached(){
     this.setRange()
-    // this.renderStyle()
+    this.renderStyle()
   },
 
   /**
@@ -101,7 +115,7 @@ Component({
       /**
        * color,
        * columnStyle, 
-       * width, 
+       * cellWidth, 
        * height, 
        * during, 
        * ease, 
@@ -114,6 +128,7 @@ Component({
         switch (i) {
           case 'during':
           case 'height':
+          case 'cellWidth':
             if(parseInt(val) || val === 0 || val === '0'){
               _options[i] = val
             }

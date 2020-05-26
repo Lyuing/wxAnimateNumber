@@ -8,7 +8,7 @@ const CONFIG = {
   color: '#FF5837', // 字体颜色
   columnStyle: '',  // 字体单元 覆盖样式
 }
-const LOCK = 500
+const LOCK = 500    // 锁止
 
 Component({
   /**
@@ -17,6 +17,7 @@ Component({
   properties: {
     value: {
       type: Number,
+      value: 0,
       observer (n){
         this.run(n)
       }
@@ -77,9 +78,7 @@ Component({
       })
       
       // 范围调整后，修正当前 value
-      if(this.properties.value) {
-        this.run(this.properties.value)
-      }
+      this.run(this.properties.value)
 
     },
     run(n){
@@ -104,7 +103,7 @@ Component({
        */
       let options = this.properties.options,
         _options = this.data._options;
-      console.log('options:',options)
+      // console.log('options:',options)
       Object.keys(options).map(i=>{
         let val = options[i]
         switch (i) {
@@ -123,7 +122,6 @@ Component({
       this.setData({
         _options
       })
-      console.log(this.data._options)
     },
   }
 })
