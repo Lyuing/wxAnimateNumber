@@ -1,8 +1,8 @@
 # wxAnimateNumber
 小程序数字滚动
 
-![image](https://raw.githubusercontent.com/LY-u/wxAnimateNumber/master/example/demo.gif)
-![image](https://img2020.cnblogs.com/blog/1367213/202005/1367213-20200526160723087-1804393568.gif)
+<img src="https://raw.githubusercontent.com/LY-u/wxAnimateNumber/master/example/demo.gif" width="300"/>
+<img src="https://img2020.cnblogs.com/blog/1367213/202005/1367213-20200526160723087-1804393568.gif" width="300"/>
 
 > 两种组件类型：
   > animateNumber: 范围内的所有数字连贯滚动，显示效果佳，但仅限于上下500内，否则页面卡顿  
